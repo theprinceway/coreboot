@@ -184,3 +184,15 @@ build a payload around it.
 
 ### Mentors
 * TODO
+
+## Implement 64-bit resource allocation
+Currently the coreboot allocator is limited to 32-bit allocation, which can be
+problematic for systems with a large number of memory-mapped devices, or
+devices with large memory regions, or hot-pluggable buses.
+
+### Requirements
+* Understand the basics of PCI resource allocation, and be willing to learn
+  more about coreboot's resource allocation.
+
+### Mentors
+* Jeremy Soller <jeremy@system76.com>
