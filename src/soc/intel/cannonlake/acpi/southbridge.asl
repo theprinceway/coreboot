@@ -17,7 +17,8 @@
 #endif
 
 /* GFX 00:02.0 */
-#include <soc/intel/common/block/acpi/acpi/gfx.asl>
+// TODO: fix inclusion when using GMA ACPI
+//#include <soc/intel/common/block/acpi/acpi/gfx.asl>
 
 /* LPC 0:1f.0 */
 #include <soc/intel/common/block/acpi/acpi/lpc.asl>
