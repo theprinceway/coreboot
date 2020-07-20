@@ -76,7 +76,7 @@ static const struct pad_config gpio_table[] = {
 		PAD_CFG_NF(GPP_A6, NONE, DEEP, NF1),
 
 	// GSPI0
-		// TODO - TPM_PIRQ#
+		// TPM_PIRQ#
 		PAD_CFG_NC(GPP_A7),
 
 	// LPC
@@ -139,8 +139,8 @@ static const struct pad_config gpio_table[] = {
 		PAD_CFG_NC(GPP_B2),
 
 	// CPU Misc
-		// GPP_B3
-		_PAD_CFG_STRUCT(GPP_B3, 0x80100100, 0x0000),
+		// GPP_B3 (touchpad interrupt)
+		PAD_CFG_GPI_APIC(GPP_B3, NONE, PLTRST, EDGE_SINGLE, INVERT),
 		// NC
 		PAD_CFG_NC(GPP_B4),
 
@@ -151,11 +151,11 @@ static const struct pad_config gpio_table[] = {
 		PAD_CFG_NC(GPP_B6),
 		// WLAN_CLKREQ#
 		PAD_CFG_NF(GPP_B7, NONE, DEEP, NF1),
-		// LAN_CLKREQ#
+		// CARD_CLKREQ#
 		PAD_CFG_NF(GPP_B8, NONE, DEEP, NF1),
-		// TBT_CLKREQ#
+		// SSD2_CLKREQ#
 		PAD_CFG_NF(GPP_B9, NONE, DEEP, NF1),
-		// SSD_CLKREQ#
+		// SSD1_CLKREQ#
 		PAD_CFG_NF(GPP_B10, NONE, DEEP, NF1),
 
 	// Power Management
