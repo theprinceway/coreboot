@@ -1,0 +1,36 @@
+FLASH 16M {
+        SI_ALL 0x400000 {
+                SI_DESC 0x1000
+                SI_ME
+        }
+        SI_BIOS 0xC00000 {
+                RW_SECTION_A 0x3D0000 {
+                        VBLOCK_A 0x10000
+                        FW_MAIN_A(CBFS)
+                        RW_FWID_A 0x40
+                }
+                RW_SECTION_B 0x3D0000 {
+                        VBLOCK_B 0x10000
+                        FW_MAIN_B(CBFS)
+                        RW_FWID_B 0x40
+                }
+                RW_MISC 0x66000 {
+                        UNIFIED_MRC_CACHE 0x20000 {
+                                RECOVERY_MRC_CACHE 0x10000
+                                RW_MRC_CACHE 0x10000
+                        }
+                        RW_NVRAM(PRESERVE) 0x6000
+                        SMMSTORE(PRESERVE)
+                }
+                WP_RO 0x3FA000 {
+                        RO_VPD 0x4000
+                        RO_SECTION 0x3F6000 {
+                                FMAP 0x800
+                                RO_FRID 0x40
+                                RO_FRID_PAD 0x7c0
+                                GBB 0x3000
+                                COREBOOT(CBFS)
+                        }
+                }
+        }
+}

@@ -89,4 +89,17 @@ config POST_DEVICE
 	bool
 	default n
 
+config VBOOT
+       select HAS_RECOVERY_MRC_CACHE
+       select MRC_CLEAR_NORMAL_CACHE_ON_RECOVERY_RETRAIN
+       select GBB_FLAG_DISABLE_LID_SHUTDOWN
+       select GBB_FLAG_DISABLE_PD_SOFTWARE_SYNC
+       select GBB_FLAG_DISABLE_EC_SOFTWARE_SYNC
+       select GBB_FLAG_DISABLE_FWMP
+       select VBOOT_NO_BOARD_SUPPORT
+
+config FMDFILE
+       string
+       default "src/mainboard/\$(CONFIG_MAINBOARD_DIR)/vboot-rwab.fmd" if VBOOT
+
 endif
