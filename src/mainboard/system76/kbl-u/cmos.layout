@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+entries
+
+#start  length  type    id      name
+0       384     r       0       reserved_memory
+384     1       e       1       DisplayPort_Output
+984     16      h       0       check_sum
+
+enumerations
+
+#ID     value   text
+1       0       Mini_DisplayPort
+1       1       USB-C
+
+checksums
+
+#checksum   start   end     location
+checksum    384     983     984
