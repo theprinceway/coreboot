@@ -167,6 +167,7 @@ The boards in this section are not real mainboards, but emulators.
 ## System76
 
 - [Lemur Pro](system76/lemp9.md)
+- [Oryx Pro](system76/oryp6.md)
 
 ## UP
 
