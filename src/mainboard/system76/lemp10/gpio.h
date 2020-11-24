@@ -108,8 +108,8 @@ static const struct pad_config gpio_table[] = {
 		PAD_NC(GPP_B9, NONE),
 		// NC
 		PAD_NC(GPP_B10, NONE),
-		// TBTA_I2C_INT
-		PAD_CFG_NF(GPP_B11, NONE, PWROK, NF1),
+		// TBTA_I2C_INT - programmed by FSP, see Intel document 617016
+		PAD_NC(GPP_B11, NONE),
 		// SLP_S0#
 		PAD_CFG_NF(GPP_B12, NONE, DEEP, NF1),
 		// PLT_RST#
